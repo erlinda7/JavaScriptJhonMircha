@@ -89,36 +89,55 @@
         ); */
 
     //-----------------------------------------Template strings------------------------------------
-    let nombre = "Erlinda";
-    let apellido = 'Chambi';
+    /*  let nombre = "Erlinda";
+     let apellido = 'Chambi'; */
 
     // Concatenacion
-    let saludo = "Hola mi nombre es " + nombre + " " + apellido + ".";
-    console.log(saludo);
+    /*  let saludo = "Hola mi nombre es " + nombre + " " + apellido + ".";
+     console.log(saludo); */
 
     //interpolacion de variables
     //Template String
-    let saludo2 = `Hola mi nombre es ${nombre} ${apellido}.`
-    console.log(saludo2);
+    /*let saludo2 = `Hola mi nombre es ${nombre} ${apellido}.`
+      console.log(saludo2);
+  
+      let ul = "  <ul>< li > Primavera</li><li>Verano</li><li>Otoño</li><li>Invierno</li></ul >"
+      console.log(ul);
+      let ul2 = `  <ul>
+      <li>Primavera</li>
+      <li>Verano</li>
+      <li>Otoño</li>
+      <li>Invierno</li>
+    </ul>`
+      console.log(ul2);
+  
+      let ul3 = "<ul>";
+      ul3 += "< li > Primavera</li>"
+      ul3 += "<li>Verano</li>"
+      ul3 += "<li>Otoño</li>"
+      ul3 += "<li>Invierno</li>"
+      ul3 += "</ul >"
+  
+      console.log(ul3); */
 
-    let ul = "  <ul>< li > Primavera</li><li>Verano</li><li>Otoño</li><li>Invierno</li></ul >"
-    console.log(ul);
-    let ul2 = `  <ul>
-    <li>Primavera</li>
-    <li>Verano</li>
-    <li>Otoño</li>
-    <li>Invierno</li>
-  </ul>`
-    console.log(ul2);
+    let a = 2;
+    let b = new Number(1);
+    let c = 7.19;
+    let d = "5.6"
 
-    let ul3 = "<ul>";
-    ul3 += "< li > Primavera</li>"
-    ul3 += "<li>Verano</li>"
-    ul3 += "<li>Otoño</li>"
-    ul3 += "<li>Invierno</li>"
-    ul3 += "</ul >"
-
-    console.log(ul3);
+    console.log(a, b);
+    console.log(c.toFixed(1));
+    console.log(c.toFixed(5));
+    console.log(parseInt(c));
+    console.log(parseFloat(c));
+    console.log(typeof c, typeof d);
+    console.log(a + b);
+    //si uno es number y el otro es string lo concatena y no suma
+    console.log(c + d);
+    console.log(c + parseInt(d));
+    console.log(c + parseFloat(d));
+    console.log(c + Number.parseInt(d));
+    console.log(c + Number.parseFloat(d));
   </script>
 </body>
 
