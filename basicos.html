@@ -44,28 +44,50 @@
 
     //------------------------const-------------------------
     // en los valores primitivos si se declara con const no se puede cambiar su valor
-    let a;
-    const PI = 3.1416;
-    console.log(PI);
-    // PI=3.15 //error no se puede reasignar
-    a = "kenai"
-    console.log(a);
+    /*   let a;
+      const PI = 3.1416;
+      console.log(PI);
+      // PI=3.15 //error no se puede reasignar
+      a = "kenai"
+      console.log(a); */
 
     // pero en los valores compuestos si se puede el const y cambiar sus valores, como tal no estamos accediendo al valor en concreto sino a una referencia por eso permite, porque al final sigue siendo el mismo arreglo
 
-    const objeto = {
-      nombre: "Erlinda",
-      edad: 35
-    }
+    /*   const objeto = {
+        nombre: "Erlinda",
+        edad: 35
+      }
+  
+      const colores = ["blanco", "negro", "azul"];
+      console.log('objeto', objeto);
+      console.log('colores', colores);
+  
+      objeto.correo = "erly@gmail.com"
+      colores.push("anarajando")
+      console.log('objeto', objeto);
+      console.log('colores', colores); */
 
-    const colores = ["blanco", "negro", "azul"];
-    console.log('objeto', objeto);
-    console.log('colores', colores);
+    ///---------------------------Cadenas de texto aka Strings---------------------
+    let nombre = "Erlinda";
+    let apellido = 'Chambi';
+    let saludo = new String("Hola mundo");
+    let lorem = "           Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloremque aliquid inventore in fuga ullam deleniti dolore ipsam ipsa ratione, voluptatem laboriosam asperiores beatae quaerat accusantium laudantium obcaecati quo impedit harum?            ";
 
-    objeto.correo = "erly@gmail.com"
-    colores.push("anarajando")
-    console.log('objeto', objeto);
-    console.log('colores', colores);
+    console.log(nombre, apellido, saludo);
+    console.log(
+      nombre.length,
+      apellido.length,
+      saludo.length,
+      nombre.toLowerCase(),
+      apellido.toUpperCase(),
+      lorem.includes("amet"),
+      lorem.includes("jon"),
+      lorem,
+      lorem.trim(),
+      lorem.split(' '),
+      lorem.split(','),
+    );
+
   </script>
 </body>
 
