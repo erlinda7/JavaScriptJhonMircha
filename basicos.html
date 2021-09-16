@@ -141,19 +141,34 @@
         console.log(c + Number.parseFloat(d)); */
 
     //----------------------------------------boolean----------------
-    let verdadero = true;
+    /* let verdadero = true;
     let falso = false;
 
     let v = Boolean(true);
     let f = Boolean(false);
 
     console.log(verdadero, falso, v, f);
-    console.log(typeof verdadero, typeof false);
+    console.log(typeof verdadero, typeof false); */
 
-    console.log(Boolean(0)); //false
-    console.log(Boolean(-7)); //true
-    console.log(Boolean("")); //false
-    console.log(Boolean(" ")); //true
+    //console.log(Boolean(0)); //false
+    //console.log(Boolean(-7)); //true
+    //console.log(Boolean("")); //false
+    // console.log(Boolean(" ")); //true
+
+
+    //----------------------------null , undefined, NaN------------------------
+    // undefined: valor ausente , que no tiene valor, no ha sido inicializada a la hora de crear
+    // null: es un valor ausente como si no existiera, pero se le asigna null al crear intencionalmente
+
+    let indefinida;
+    console.log(indefinida);
+
+    let nulo = null;
+    console.log(nulo);
+
+    //// --------------NaN - Not a Number
+    let noEsUnNumero = "hola" * 3.7;
+    console.log(noEsUnNumero);
   </script>
 </body>
 
