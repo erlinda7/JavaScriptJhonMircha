@@ -260,16 +260,16 @@
 
     //--------------objetos---------
     /*/* dentro de un objeto a las variables se le van a llamar atributos/propiedades y a las funciones se les llama métodos */
-    let a =new String("Hola");
+  /*   let a =new String("Hola");
     console.log(a);
 
     const b = {
 
     }
-    console.log(b);
+    console.log(b); */
 
     //antigua
-    const c = new Object();
+  /*   const c = new Object();
     console.log(c);
 
     const erl = {
@@ -308,7 +308,87 @@
     console.log(Object.values(erl));
     console.log(Object.keys(erl));
     console.log(erl.hasOwnProperty("nombre"));
-    console.log(erl.hasOwnProperty("nacimiento"));
+    console.log(erl.hasOwnProperty("nacimiento")); */
+
+    //------------------------operadores---------------
+    // aritmeticos: + - * / % () 
+
+    let a = 5 + (5 - 10) * 3
+    let modulo = 5 % 2
+
+    console.log(a);
+    console.log(modulo);
+
+    // operadores relacionales: >, <, >=, <=, ==, ===, !=, !==
+    console.log(8 > 9); 
+    console.log(9 > 8);
+    console.log(8 >= 9); 
+    console.log(9 >= 8);
+    console.log(7 < 7);
+    console.log(7 <= 7);
+
+    /*
+    = 1 igual a asignacion de variable
+    == 2 iguales comparacion de solo valores
+    === 3 iguales es comparacion de tipo de dato y de valor
+    */
+    console.log('--------------------');
+    console.log(7 == 7);
+    console.log("7" == 7);
+    console.log(0 == false);
+
+    console.log('--------------------');
+    console.log(7 === 7);
+    console.log("7" === 7);
+    console.log(0 === false);
+
+    // Incremento Decremento
+    let i = 1;
+    i = i + 2;
+    console.log('--------------------');
+    console.log(i);
+    i += 3;
+    console.log(i);
+    i -= 1
+    console.log(i);
+    i /= 2
+    console.log(i);
+    i *= 3
+    console.log(i);
+
+    //operador unario
+    // recomendado i++, i--
+    let j = 2;
+    j++;
+    console.log('--------------------');
+    console.log(j);
+    j--;
+    console.log(j);
+    ++i;
+    console.log(j);
+    --j
+    console.log(j);
+
+    console.log('--------------------');
+    let k=2
+    console.log(k++); // en consola 2, porque despues del console lo suma
+    console.log(++k); // 4, como la le sumo 1 y otro 1 antes de mostrar
+
+    // operadores logicos
+    /*
+      !  - Not : niega, es decir lo que es verdadero lo vuelve falso y viceversa
+      || - Or  : cuando tengo 2 o mas condiciones, con que una se cumpla , es decir sea verdadera, el OR sera verdadero
+      && - And  : cuando tengo 2 o mas condiciones, todas tienen que cumplirse, es decir ser verdaderas para que AND se valide
+    */
+    console.log('-------------------logicos');
+    console.log(!true);
+    console.log(!false);
+
+    console.log((9 === 9) || ("9" === 9));
+    console.log((9 === "9") || ("9" === 9));
+
+    console.log((9 === 9) && ("9" === 9));
+    console.log((9 === 9) && ("9" === "9"));
 
 
   </script>
