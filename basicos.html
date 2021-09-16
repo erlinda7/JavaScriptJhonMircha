@@ -191,7 +191,7 @@
     estoEsUnaFuncion();
     estoEsUnaFuncion(); */
 
-    function unaFuncionQueDevuelveValor(){
+    /* function unaFuncionQueDevuelveValor(){
       console.log("Uno");
       return 19;
       console.log("Dos");
@@ -207,23 +207,56 @@
 
     saludar("kenai" , 7)
     saludar();
-
+ */
     //Funciones declaradaa vs funciones expresadas
-    funcionDeclarada();
+   /*  funcionDeclarada();
 
     function funcionDeclarada() {
       console.log("esto es una funcion declarada puede invocarse en cuañquier parte se nuestro codigo, incluso antes de que la funcion es declarada")
     }
 
     funcionDeclarada();
-
+ */
     //funciones expresada - funcion anonima
     //funcionExpresada();  // error
-    const funcionExpresada = function(){
+ /*    const funcionExpresada = function(){
       console.log(`Esto es una funcion expresada, es decir que se ha asuçignado como valor a una variable, 
       si invocamos esta function antes de su definicion javascript nos dira .Cannot access 'funcionExpresada' before initialization`);
     }
-    funcionExpresada();
+    funcionExpresada(); */
+
+    const a = [];
+    const b = [1, true, "hola", ["A","B","C",[1,2,3]]];
+    console.log(a);
+    console.log(b);
+    console.log(b.length);
+    console.log(b[2]);
+    console.log(b[3][2]);
+    console.log(b[3][3][0]);
+
+    const c = Array.of("X","Y","Z",9,8,7)
+    console.log(c);
+
+    const d = Array(100).fill(false)
+    console.log(d);
+
+    ///antigua
+    const e = new Array(); 
+    console.log(e);
+    const f= new Array(1,2,3,true,false)
+    console.log(f);
+
+    const colores =["rojo", "verde", "azul"]
+    console.log(colores);
+    colores.push("negro")
+    console.log(colores);
+    colores.pop()
+    console.log(colores);
+
+    colores.forEach(function (el,index) {
+console.log(`<li id=${index}>${el}</li>`);
+    })
+
   </script>
 </body>
 
