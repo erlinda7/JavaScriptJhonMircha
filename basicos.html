@@ -120,24 +120,40 @@
   
       console.log(ul3); */
 
-    let a = 2;
-    let b = new Number(1);
-    let c = 7.19;
-    let d = "5.6"
-
-    console.log(a, b);
-    console.log(c.toFixed(1));
-    console.log(c.toFixed(5));
-    console.log(parseInt(c));
-    console.log(parseFloat(c));
-    console.log(typeof c, typeof d);
-    console.log(a + b);
+    //-------------------------Number--------------------------
+    /*  let a = 2;
+     let b = new Number(1);
+     let c = 7.19;
+     let d = "5.6"
+ 
+     console.log(a, b);
+     console.log(c.toFixed(1));
+     console.log(c.toFixed(5));
+     console.log(parseInt(c));
+     console.log(parseFloat(c));
+     console.log(typeof c, typeof d);
+     console.log(a + b); */
     //si uno es number y el otro es string lo concatena y no suma
-    console.log(c + d);
-    console.log(c + parseInt(d));
-    console.log(c + parseFloat(d));
-    console.log(c + Number.parseInt(d));
-    console.log(c + Number.parseFloat(d));
+    /*     console.log(c + d);
+        console.log(c + parseInt(d));
+        console.log(c + parseFloat(d));
+        console.log(c + Number.parseInt(d));
+        console.log(c + Number.parseFloat(d)); */
+
+    //----------------------------------------boolean----------------
+    let verdadero = true;
+    let falso = false;
+
+    let v = Boolean(true);
+    let f = Boolean(false);
+
+    console.log(verdadero, falso, v, f);
+    console.log(typeof verdadero, typeof false);
+
+    console.log(Boolean(0)); //false
+    console.log(Boolean(-7)); //true
+    console.log(Boolean("")); //false
+    console.log(Boolean(" ")); //true
   </script>
 </body>
 
