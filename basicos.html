@@ -225,7 +225,7 @@
     }
     funcionExpresada(); */
 
-    const a = [];
+/*     const a = [];
     const b = [1, true, "hola", ["A","B","C",[1,2,3]]];
     console.log(a);
     console.log(b);
@@ -238,10 +238,10 @@
     console.log(c);
 
     const d = Array(100).fill(false)
-    console.log(d);
+    console.log(d); */
 
     ///antigua
-    const e = new Array(); 
+/*     const e = new Array(); 
     console.log(e);
     const f= new Array(1,2,3,true,false)
     console.log(f);
@@ -254,8 +254,62 @@
     console.log(colores);
 
     colores.forEach(function (el,index) {
-console.log(`<li id=${index}>${el}</li>`);
-    })
+    console.log(`<li id=${index}>${el}</li>`);
+    }) */
+
+
+    //--------------objetos---------
+    /*/* dentro de un objeto a las variables se le van a llamar atributos/propiedades y a las funciones se les llama métodos */
+    let a =new String("Hola");
+    console.log(a);
+
+    const b = {
+
+    }
+    console.log(b);
+
+    //antigua
+    const c = new Object();
+    console.log(c);
+
+    const erl = {
+      nombre:"erlinda",
+      apellido:"chambi",
+      edad:32,
+      pasatiempos: ["correr", "hacer ejercicio", "dar clases"],
+      soltero: true,
+      contacto: {
+        email:"erly@gamil.com",
+        twitter: "@erlynda",
+        movil:"59145665676"
+      },
+      saludar: function(){
+        console.log(`Hola :)`);
+      },
+      decirMiNombre: function () {
+        console.log(`Hola me llamo ${this.nombre} ${this.apellido} y tengo ${this.edad} años y me puedes seguir como ${this.contacto.twitter}`);
+      }
+    }
+
+    console.log(erl);
+    console.log(erl["nombre"]);
+    console.log(erl["apellido"]);
+    console.log(erl.nombre);
+    console.log(erl.edad);
+    console.log(erl.soltero);
+    console.log(erl.pasatiempos);
+    console.log(erl.pasatiempos[1]);
+    console.log(erl.contacto);
+    console.log(erl.contacto.twitter);
+    erl.saludar()
+    erl.decirMiNombre()
+
+    console.log(Object.keys(erl));
+    console.log(Object.values(erl));
+    console.log(Object.keys(erl));
+    console.log(erl.hasOwnProperty("nombre"));
+    console.log(erl.hasOwnProperty("nacimiento"));
+
 
   </script>
 </body>
