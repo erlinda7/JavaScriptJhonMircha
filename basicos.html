@@ -11,34 +11,61 @@
 <body>
   <h1>Fundamentos javascript</h1>
   <script>
-    var hola = "Hola Mundo"
-    let hello = "Hello Word"
-    console.log('hola', hola);
-    console.log('hello', hello);
+    /////////---------------------var vs let--------------------
+    /*  var hola = "Hola Mundo"
+     let hello = "Hello Word"
+     console.log('hola', hola);
+     console.log('hello', hello); */
     /*el objeto window mapea toda la ventana del navegador, es el objeto global dentro del navegador*/
-    console.log('window', window);
-    console.log('window.hola', window.hola);
-    console.log('window.hello', window.hello);
+    /*  console.log('window', window);
+     console.log('window.hola', window.hola);
+     console.log('window.hello', window.hello); */
     // Ambito de bloque
-    console.log('******************var**************************');
-    var musica = "Rock"
-    console.log("variables Musica antes del bloque", musica);
+    /*  console.log('******************var**************************');
+     var musica = "Rock"
+     console.log("variables Musica antes del bloque", musica); */
     // Esto es un bloque
-    {
-      var musica = "Pop"
-      console.log("variables Musica dentro del bloque", musica);
-    }
-    console.log("variables Musica despues del bloque", musica);
+    /*   {
+        var musica = "Pop"
+        console.log("variables Musica dentro del bloque", musica);
+      }
+      console.log("variables Musica despues del bloque", musica);
+  
+      console.log('******************let**************************');
+      let musica2 = "Rock"
+      console.log("variables Musica antes del bloque", musica2); */
+    // Esto es un bloque
+    /*   {
+        let musica2 = "Pop"
+        console.log("variables Musica dentro del bloque", musica2);
+      }
+      console.log("variables Musica despues del bloque", musica2); */
 
-    console.log('******************let**************************');
-    let musica2 = "Rock"
-    console.log("variables Musica antes del bloque", musica2);
-    // Esto es un bloque
-    {
-      let musica2 = "Pop"
-      console.log("variables Musica dentro del bloque", musica2);
+
+    //------------------------const-------------------------
+    // en los valores primitivos si se declara con const no se puede cambiar su valor
+    let a;
+    const PI = 3.1416;
+    console.log(PI);
+    // PI=3.15 //error no se puede reasignar
+    a = "kenai"
+    console.log(a);
+
+    // pero en los valores compuestos si se puede el const y cambiar sus valores, como tal no estamos accediendo al valor en concreto sino a una referencia por eso permite, porque al final sigue siendo el mismo arreglo
+
+    const objeto = {
+      nombre: "Erlinda",
+      edad: 35
     }
-    console.log("variables Musica despues del bloque", musica2);
+
+    const colores = ["blanco", "negro", "azul"];
+    console.log('objeto', objeto);
+    console.log('colores', colores);
+
+    objeto.correo = "erly@gmail.com"
+    colores.push("anarajando")
+    console.log('objeto', objeto);
+    console.log('colores', colores);
   </script>
 </body>
 
