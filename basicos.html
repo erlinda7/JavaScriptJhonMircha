@@ -533,24 +533,46 @@
 
     /* **********     Curso JavaScript: 16. Manejo de Errores - #jonmircha     ********** */
     /*isNaN(numero), si no es un numero devuelve true , ejm: e, ., 3d, holaM, devuelve true*/
-    try {
-      console.log("En el Try se agrega el código a evaluar");
-      noExiste;
-      console.log("Segundo mensaje en el try");
-    } catch (error) {
-      console.log("Catch, captura cualquier error surgido o lanzado en el try");
-      console.log(error);
-    } finally {
-      console.log("El bloque finally se ejecutará siempre al final de unbloque try-catch");
-    }
-    try {
-      let numero = "y";
-      if (isNaN(numero)) {
-        throw new Error("El caractér introducido no es un Número");
+    /*     try {
+          console.log("En el Try se agrega el código a evaluar");
+          noExiste;
+          console.log("Segundo mensaje en el try");
+        } catch (error) {
+          console.log("Catch, captura cualquier error surgido o lanzado en el try");
+          console.log(error);
+        } finally {
+          console.log("El bloque finally se ejecutará siempre al final de unbloque try-catch");
+        }
+        try {
+          let numero = "y";
+          if (isNaN(numero)) {
+            throw new Error("El caractér introducido no es un Número");
+          }
+          console.log(numero * numero);
+        } catch (error) {
+          console.log(`Se produjo el siguiente error: ${error}`);
+        } */
+
+
+    /* **********     Curso JavaScript: 17. break & continue - #jonmircha     ********** */
+    /*
+    break: hace que se salga del for, ya no se ejecuta lo que esta despues
+    continue: hace que es omitir el codigo que estas ejecutando que se encuentra en esa iteracion de ese ciclo, solo rompe esa vuelta, se salta solo la iteracion
+    */
+
+    const numeros = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0];
+    for (let i = 0; i < numeros.length; i++) {
+      console.log('i', i);
+      if (i === 5) {
+        break;
       }
-      console.log(numero * numero);
-    } catch (error) {
-      console.log(`Se produjo el siguiente error: ${error}`);
+      console.log(numeros[i]);
+    }
+    for (let i = 0; i < numeros.length; i++) {
+      if (i === 5) {
+        continue;
+      }
+      console.log(numeros[i]);
     }
   </script>
 </body>
