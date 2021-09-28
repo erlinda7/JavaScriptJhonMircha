@@ -619,27 +619,73 @@
 
     /* **********     Curso JavaScript: 20. Parámetros REST & Operador Spread - #jonmircha     ********** */
     /*parametros REST: ...c */
-    function sumar(a, b, ...c) {
-      let resultado = a + b;
-      c.forEach(function (n) {
-        resultado += n
-      });
-      return resultado
+    /*     function sumar(a, b, ...c) {
+          let resultado = a + b;
+          c.forEach(function (n) {
+            resultado += n
+          });
+          return resultado
+        }
+    
+        console.log(sumar(1, 2));
+        console.log(sumar(1, 2, 3));
+        console.log(sumar(1, 2, 3, 4));
+        console.log(sumar(1, 2, 3, 4, 5));
+        console.log(sumar(1, 2, 3, 4, 5, 6));
+        console.log(sumar(1, 2, 3, 4, 5, 6, 7));
+    
+        const arr1 = [1, 2, 3, 4, 5],
+          arr2 = [6, 7, 8, 9, 0]
+    
+        console.log(arr1, arr2);
+    
+        const arr3 = [...arr1, arr2]; */
+
+
+    /* **********     Curso JavaScript: 21. Arrow Functions - #jonmircha     ********** */
+    /*funcion expresada no se puede invocar antes*/
+
+    /* const saludar = () => console.log(`Hola`);
+    saludar(); */
+
+    const saludar = nombre => console.log(`Hola ${nombre}`);
+    saludar("Irma");
+
+    /* const sumar = function (a, b) {
+      return a + b;
+    } */
+
+    const sumar = (a, b) => a + b;
+
+    console.log(sumar(9, 9));
+
+    const funcionDeVariasLineas = () => {
+      console.log("Uno");
+      console.log("Dos");
+      console.log("Tres");
     }
 
-    console.log(sumar(1, 2));
-    console.log(sumar(1, 2, 3));
-    console.log(sumar(1, 2, 3, 4));
-    console.log(sumar(1, 2, 3, 4, 5));
-    console.log(sumar(1, 2, 3, 4, 5, 6));
-    console.log(sumar(1, 2, 3, 4, 5, 6, 7));
+    funcionDeVariasLineas();
 
-    const arr1 = [1, 2, 3, 4, 5],
-      arr2 = [6, 7, 8, 9, 0]
+    const numeros = [1, 2, 3, 4, 5];
+    numeros.forEach((el, index) => console.log(`${el} esta en la posición ${index}`));
 
-    console.log(arr1, arr2);
+    //funcion expresada
+    function Perro() {
+      console.log(this);
+    }
+    Perro();
 
-    const arr3 = [...arr1, arr2];
+    //una arrow function dentro de un objeto no sirve mucho, es mejor asi con la nueva forma
+    const perro = {
+      nombre: "kenai",
+      ladrar() {
+        console.log(this)
+      }
+    }
+    perro.ladrar();
+
+
   </script>
 </body>
 
