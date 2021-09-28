@@ -393,28 +393,28 @@
     /* **********     Curso JavaScript: 14. Condicionales - #jonmircha     ********** */
 
     /* if - else */
-
-    let edad = 9;
-    if (edad > 17) {
-      console.log("Eres mayor de Edad");
-    } else {
-      console.log("Eres menor de Edad");
-    }
-    if (edad >= 18) {
-      console.log("Eres mayor de Edad");
-    } else {
-      console.log("Eres menor de Edad");
-    }
-    if (edad < 18) {
-      console.log("Eres menor de Edad");
-    } else {
-      console.log("Eres mayor de Edad");
-    }
-    if (edad <= 17) {
-      console.log("Eres menor de Edad");
-    } else {
-      console.log("Eres mayor de Edad");
-    }
+    /* 
+        let edad = 9;
+        if (edad > 17) {
+          console.log("Eres mayor de Edad");
+        } else {
+          console.log("Eres menor de Edad");
+        }
+        if (edad >= 18) {
+          console.log("Eres mayor de Edad");
+        } else {
+          console.log("Eres menor de Edad");
+        }
+        if (edad < 18) {
+          console.log("Eres menor de Edad");
+        } else {
+          console.log("Eres mayor de Edad");
+        }
+        if (edad <= 17) {
+          console.log("Eres menor de Edad");
+        } else {
+          console.log("Eres mayor de Edad");
+        } */
 
     /* if - else if - else */
     /*
@@ -423,32 +423,32 @@
       Buenas tardes 12hrs - 18hrs
       Buenas noches 19hrs - 23hrs
     */
-    let hora = 23;
-    if (hora >= 0 && hora <= 5) {
-      console.log("Déjame dormir");
-    } else if (hora >= 6 && hora <= 11) {
-      console.log("Buenos días");
-    } else if (hora >= 12 && hora <= 18) {
-      console.log("Buenas tardes");
-    } else {
-      console.log("Buenas noches");
-    }
-    if (hora < 6) {
-      console.log("Déjame dormir");
-    } else if (hora > 5 && hora < 12) {
-      console.log("Buenos días");
-    } else if (hora > 11 && hora < 19) {
-      console.log("Buenas tardes");
-    } else {
-      console.log("Buenas noches");
-    }
+    /*     let hora = 23;
+        if (hora >= 0 && hora <= 5) {
+          console.log("Déjame dormir");
+        } else if (hora >= 6 && hora <= 11) {
+          console.log("Buenos días");
+        } else if (hora >= 12 && hora <= 18) {
+          console.log("Buenas tardes");
+        } else {
+          console.log("Buenas noches");
+        }
+        if (hora < 6) {
+          console.log("Déjame dormir");
+        } else if (hora > 5 && hora < 12) {
+          console.log("Buenos días");
+        } else if (hora > 11 && hora < 19) {
+          console.log("Buenas tardes");
+        } else {
+          console.log("Buenas noches");
+        } */
 
     /* Operador Ternario (condición) ? verdadero : falsa */
-    console.log("Operador Ternario");
-    let eresMayor = (edad >= 18)
-      ? "Eres mayor de Edad"
-      : "Eres menor de Edad";
-    console.log(eresMayor);
+    /*   console.log("Operador Ternario");
+      let eresMayor = (edad >= 18)
+        ? "Eres mayor de Edad"
+        : "Eres menor de Edad";
+      console.log(eresMayor); */
 
     /* switch - case */
     /*
@@ -460,32 +460,75 @@
     viernes - 5
     sábado - 6
     */
-    let dia = 2;
-    switch (dia) {
-      case 0:
-        console.log("Domingo");
-        break;
-      case 1:
-        console.log("Lunes");
-        break;
-      case 2:
-        console.log("Martes");
-        break;
-      case 3:
-        console.log("Miércoles");
-        break;
-      case 4:
-        console.log("Jueves");
-        break;
-      case 5:
-        console.log("Viernes");
-        break;
-      case 6:
-        console.log("Sábado");
-        break;
-      default:
-        console.log("El día no existe");
-        break;
+    /*    let dia = 2;
+       switch (dia) {
+         case 0:
+           console.log("Domingo");
+           break;
+         case 1:
+           console.log("Lunes");
+           break;
+         case 2:
+           console.log("Martes");
+           break;
+         case 3:
+           console.log("Miércoles");
+           break;
+         case 4:
+           console.log("Jueves");
+           break;
+         case 5:
+           console.log("Viernes");
+           break;
+         case 6:
+           console.log("Sábado");
+           break;
+         default:
+           console.log("El día no existe");
+           break;
+       } */
+
+    /* **********     Curso JavaScript: 15. Ciclos (Loops) - #jonmircha     ********** */
+
+    let contador = 0;
+    while (contador < 10) {
+      console.log("while " + contador);
+      contador++;
+    }
+    do {
+      console.log("do while " + contador);
+      contador++;
+    } while (contador < 10);
+
+    /*  for (inicialización de variable; condición; decremento o incremento) {
+             sentencias que ejecuta el for
+             sentencias que ejecuta el for
+             sentencias que ejecuta el for
+           } */
+
+    for (let i = 0; i < 10; i++) {
+      console.log("for " + i);
+    }
+    let numeros = [10, 20, 30, 40, 50, 60, 70, 80, 90, 100];
+    for (let i = 0; i < numeros.length; i++) {
+      console.log(numeros[i]);
+    }
+    const jon = {
+      nombre: "Jon",
+      apellido: "MirCha",
+      edad: 35
+    }
+    /*recorrer todos los elemetos de un objetos primitivos*/
+    for (const propiedad in jon) {
+      console.log(`Key: ${propiedad}, Value: ${jon[propiedad]}`);
+    }
+    /*permite recorrer cualquier objeto javascript que sea iterable como arreglos, cadenas*/
+    for (const elemento of numeros) {
+      console.log(elemento);
+    }
+    let cadena = "Hola Mundo";
+    for (const caracter of cadena) {
+      console.log(caracter);
     }
   </script>
 </body>
