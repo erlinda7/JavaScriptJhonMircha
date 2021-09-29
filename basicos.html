@@ -778,67 +778,146 @@
 
     /* **********     Curso JavaScript: 24. Clases - #jonmircha y Curso JavaScript: 25. Métodos estáticos, getters y setters - #jonmircha     ********** */
 
-    class Animal {
-      //el constructor es un método especial que se ejecuta en el momento de instanciar la clase
-      constructor(nombre, genero) {
-        this.nombre = nombre;
-        this.genero = genero;
-      };
+    /*     class Animal {
+          //el constructor es un método especial que se ejecuta en el momento de instanciar la clase
+          constructor(nombre, genero) {
+            this.nombre = nombre;
+            this.genero = genero;
+          };
+    
+          //Métodos
+          sonar() {
+            console.log("Hago sonidos por que estoy vivo");
+          };
+          saludar() {
+            console.log(`Hola me llamo ${this.nombre}`);
+          };
+        }
+    
+        class Perro extends Animal {
+          constructor(nombre, genero, tamanio) {
+            //con el método super() se manda a llamar el constructor de la clase padres
+            super(nombre, genero);
+            this.tamanio = tamanio;
+            this.raza = null;
+          }
+          sonar() {
+            console.log("Soy un perro y mi sonido es un ladrido");
+          }
+          ladrar() {
+            console.log("Guauuu Guauuu!!!");
+          }
+    
+          //un método estático se pueden ejecutar sin necesidad de instanciar la clase
+          static queEres() {
+            console.log("Los perros somos animales mamíferos que pertenecemos a la familia de los caninos. Somos considerados los mejores amigos del hombre.");
+          }
+    
+          //Los setters y getters son métodos especiales que nos permiten establecer y obtener los valores de atributos de nuestra clase
+          get getRaza() {
+            return this.raza;
+          }
+          set setRaza(raza) {
+            this.raza = raza;
+          }
+        }
+    
+        Perro.queEres();
+    
+        const mimi = new Animal("Mimi", "Hembra"),
+          scooby = new Perro("Scooby", "Macho", "Gigante")
+    
+        console.log(mimi);
+        mimi.saludar()
+        mimi.sonar()
+    
+        console.log(scooby);
+        scooby.saludar();
+        scooby.sonar();
+        scooby.ladrar();
+    
+        console.log(scooby.getRaza);
+        scooby.setRaza = "Gran Danes";
+        console.log(scooby.getRaza); */
 
-      //Métodos
-      sonar() {
-        console.log("Hago sonidos por que estoy vivo");
-      };
-      saludar() {
-        console.log(`Hola me llamo ${this.nombre}`);
-      };
+
+    /* **********     Curso JavaScript: 26. Objeto console - #jonmircha     ********** */
+    console.log(console);
+    console.error("Esto es un error");
+    console.warn("Esto es un aviso");
+    console.info("Esto es un mensaje informativo");
+    console.log("un registr de lo que ha pasado en nuestra aplicacion");
+
+    let nombre = "Jhon", apellido = "MirCha", edad = 35;
+    console.log(nombre);
+    console.log(apellido);
+    console.log(edad);
+    console.log(nombre, apellido, edad);
+    console.log(`Hola mi es ${nombre} ${apellido} y mi edad es ${edad}`);
+    console.log(`Hola mi es %s %s y mi es %s`, nombre, apellido, edad);
+    console.clear();
+
+    console.log(window);
+    console.log(document);
+    console.dir(window)
+    console.dir(document)
+    console.clear();
+
+    console.group("Cursos de @jonmircha en YouTube");
+    console.log("Curso de JavaScript");
+    console.log("Curso de Node.js");
+    console.log("Curso de PWAs");
+    console.log("Curso de Flexbox");
+    console.log("Curso de Diseño y Programación Web");
+    console.groupEnd();
+
+    console.groupCollapsed("Cursos de @jonmircha en YouTube");
+    console.log("Curso de JavaScript");
+    console.log("Curso de Node.js");
+    console.log("Curso de PWAs");
+    console.log("Curso de Flexbox");
+    console.log("Curso de Diseño y Programación Web");
+    console.groupEnd();
+    console.clear();
+
+    console.log(console);
+    console.table(Object.entries(console).sort());
+
+    const numeros = [1, 2, 3, 4, 5],
+      vocales = ["a", "e", "i", "o", "u"];
+    console.table(numeros);
+    console.table(vocales);
+
+
+    const perro = {
+      nombre: "Boni",
+      raza: "Boxer",
+      color: "cafe"
     }
+    console.table(perro);
+    console.clear();
 
-    class Perro extends Animal {
-      constructor(nombre, genero, tamanio) {
-        //con el método super() se manda a llamar el constructor de la clase padres
-        super(nombre, genero);
-        this.tamanio = tamanio;
-        this.raza = null;
-      }
-      sonar() {
-        console.log("Soy un perro y mi sonido es un ladrido");
-      }
-      ladrar() {
-        console.log("Guauuu Guauuu!!!");
-      }
-
-      //un método estático se pueden ejecutar sin necesidad de instanciar la clase
-      static queEres() {
-        console.log("Los perros somos animales mamíferos que pertenecemos a la familia de los caninos. Somos considerados los mejores amigos del hombre.");
-      }
-
-      //Los setters y getters son métodos especiales que nos permiten establecer y obtener los valores de atributos de nuestra clase
-      get getRaza() {
-        return this.raza;
-      }
-      set setRaza(raza) {
-        this.raza = raza;
-      }
+    //el mensaje time tiene que ser el mismo de timeEnd es como un codigo o bandera
+    console.time('Cuanto tiempo tarda mi código');
+    const arreglo = Array(1000000);
+    for (let i = 0; i < arreglo.length; i++) {
+      arreglo[i] = i;
     }
+    console.timeEnd('Cuanto tiempo tarda mi código');
+    //console.log(arreglo);
+    console.clear();
 
-    Perro.queEres();
+    for (let i = 0; i <= 100; i++) {
+      console.count("código for");
+      console.log(i);
+    }
+    console.clear();
 
-    const mimi = new Animal("Mimi", "Hembra"),
-      scooby = new Perro("Scooby", "Macho", "Gigante")
+    let x = 3,
+      y = 2,
+      pruebaXY = "Se espera que X siempre sea menor que Y";
+    console.assert(x < y, { x, y, pruebaXY });
 
-    console.log(mimi);
-    mimi.saludar()
-    mimi.sonar()
-
-    console.log(scooby);
-    scooby.saludar();
-    scooby.sonar();
-    scooby.ladrar();
-
-    console.log(scooby.getRaza);
-    scooby.setRaza = "Gran Danes";
-    console.log(scooby.getRaza);
 
   </script>
 </body>
