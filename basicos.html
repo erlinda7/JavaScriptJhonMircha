@@ -1015,13 +1015,47 @@
     //confirm("Hola esto es una confirmación");
     //prompt("Hola esto es un aviso y le permite al usuario ingresar un valor");
 
-    let alerta = alert("Hola esto es una alerta"),
+    /* let alerta = alert("Hola esto es una alerta"),
       confirmacion = confirm("Hola esto es una confirmación"),
       aviso = prompt("Hola esto es un aviso y le permite al usuario ingresar un valor");
     console.log(alerta);
     console.log(confirmacion);
-    console.log(aviso);
+    console.log(aviso); */
 
+
+
+
+    /* **********     Curso JavaScript: 31. Expresiones Regulares - #jonmircha     ********** */
+    /*
+     Expresiones Regulares
+        Son una secuencia de caracteres que forma un patrón de búsqueda, principalmente utilizada para la búsqueda de patrones de cadenas de caracteres.
+        https://es.wikipedia.org/wiki/Expresi%C3%B3n_regular
+        https://developer.mozilla.org/es/docs/Web/JavaScript/Guide/Regular_Expressions
+    */
+    let cadena = "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odio, recusandae doloribus nam beatae libero eaque, molestias, inventore harum dolores quos aliquid quaerat rem qui odit ipsum laudantium! Ad, necessitatibus dolorem.3 8"
+
+    //2 formas de declarar una expresion, // 'i', ignora mayusculas, 'g' que busque todas las coincidencias son banderas
+    /*     let expReg = new RegExp("lorem", "ig");
+        console.log(expReg.test(cadena));
+        console.log(expReg.exec(cadena)); */
+
+    //busca lorem ignorando mayusculas y todas las coincidencias
+    //let expReg2 = /lorem/ig;
+
+    //busca numeros
+    //let expReg2 = /\d/ig;
+
+    //busca en un rango numeros
+    //let expReg2 = /[0-9]/ig
+
+    //se repite lorem al menos una vez
+    //let expReg2 = /lorem{1}/ig
+
+    //se repite lorem al menos una vez hasta tres veces
+    let expReg2 = /lorem{1,3}/ig
+
+    console.log(expReg2.test(cadena));
+    console.log(expReg2.exec(cadena));
   </script>
 </body>
 
