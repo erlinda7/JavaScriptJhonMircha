@@ -50,43 +50,76 @@
      */
 
 
-    //Código Síncrono Bloquenate
-    (() => {
-      console.log("Código Síncrono");
-      console.log("Inicio");
-      function dos() {
-        console.log("Dos");
-      }
-      function uno() {
-        console.log("Uno");
-        dos();
-        console.log("Tres");
-      }
-      uno();
-      console.log("Fin");
-    })();
-    console.log("********************");
-
-    //Código Asíncrono No Bloquenate
-    (() => {
-      console.log("Código Asíncrono");
-      console.log("Inicio");
-      function dos() {
-        setTimeout(function () {
+    /*   //Código Síncrono Bloquenate
+      (() => {
+        console.log("Código Síncrono");
+        console.log("Inicio");
+        function dos() {
           console.log("Dos");
-        }, 1000);
-      }
-      function uno() {
-        setTimeout(function () {
+        }
+        function uno() {
           console.log("Uno");
-        }, 0);
-        dos();
-        console.log("Tres");
-      }
-      uno();
-      console.log("Fin");
-    })();
+          dos();
+          console.log("Tres");
+        }
+        uno();
+        console.log("Fin");
+      })();
+      console.log("********************");
+  
+      //Código Asíncrono No Bloquenate
+      (() => {
+        console.log("Código Asíncrono");
+        console.log("Inicio");
+        function dos() {
+          setTimeout(function () {
+            console.log("Dos");
+          }, 1000);
+        }
+        function uno() {
+          setTimeout(function () {
+            console.log("Uno");
+          }, 0);
+          dos();
+          console.log("Tres");
+        }
+        uno();
+        console.log("Fin");
+      })();
+   */
 
+
+    /* **********     Curso JavaScript: 46. Callbacks - #jonmircha     ********** */
+    function cuadradoCallback(value, callback) {
+      setTimeout(() => {
+        //se ejecuta la funcion o invoca
+        callback(value, value * value);
+      }, 0 | Math.random() * 1000);
+    }
+
+    //ejecutaamos la funcion
+    cuadradoCallback(0, (value, result) => {
+      console.log("inicia callback");
+      console.log(`Callback: ${value}, ${result}`);
+      cuadradoCallback(1, (value, result) => {
+        console.log(`Callback: ${value}, ${result}`);
+        cuadradoCallback(2, (value, result) => {
+          console.log(`Callback: ${value}, ${result}`);
+          cuadradoCallback(3, (value, result) => {
+            console.log(`Callback: ${value}, ${result}`);
+            cuadradoCallback(4, (value, result) => {
+              console.log(`Callback: ${value}, ${result}`);
+              cuadradoCallback(5, (value, result) => {
+                console.log(`Callback: ${value}, ${result}`);
+                console.log("Fin Callback");
+                console.log("Callback Hell !!!!!😈🤘");
+                console.log("http://callbackhell.com/");
+              })
+            })
+          })
+        })
+      })
+    })
   </script>
 </body>
 
