@@ -52,7 +52,7 @@
 
 
     /* **********     Curso JavaScript: 50. Sets - #jonmircha     ********** */
-    const set = new Set([1, 2, 3, 3, 4, 5, true, false, false, {}, {}, "hola", "HOla"]);
+    /* const set = new Set([1, 2, 3, 3, 4, 5, true, false, false, {}, {}, "hola", "HOla"]);
     console.log(set);
     console.log(set.size);
 
@@ -87,7 +87,48 @@
     console.log(set.has("19"));
 
     set2.clear();
-    console.log(set2);
+    console.log(set2); */
+
+
+
+    /* **********     Curso JavaScript: 51. Maps - #jonmircha     ********** */
+    const mapa = new Map();
+    mapa.set("nombre", "Jon");
+    mapa.set("apellido", "MirCha");
+    mapa.set("edad", 35);
+    console.log(mapa);
+    console.log(mapa.size);
+    console.log(mapa.has("correo"));
+    console.log(mapa.has("nombre"));
+    console.log(mapa.get("nombre"));
+    mapa.set("nombre", "Jonathan MirCha");
+    console.log(mapa.get("nombre"));
+    mapa.delete("apellido");
+    console.log(mapa);
+
+    mapa.set(19, "diecinueve");
+    mapa.set(false, "falso");
+    mapa.set({}, {});
+    console.log(mapa);
+
+    for (let [key, value] of mapa) {
+      console.log(`Llave: ${key}, Valor: ${value}`);
+    }
+
+    const mapa2 = new Map([
+      ["nombre", "Kenai"],
+      ["edad", 7],
+      ["animal", "perro"],
+      [null, "null"]
+    ]);
+
+    console.log(mapa2);
+
+    const llavesMapa2 = [...mapa2.keys()];
+    const valoresMapa2 = [...mapa2.values()];
+    console.log(llavesMapa2);
+    console.log(valoresMapa2);
+
   </script>
 </body>
 
