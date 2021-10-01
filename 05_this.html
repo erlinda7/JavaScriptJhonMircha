@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>this en JavaScript</title>
+</head>
+
+<body>
+  <h1>this en JavaScript</h1>
+  <script>
+    /* **********     Curso JavaScript: 57. this - #jonmircha     ********** */
+    console.log(this);
+    console.log(window);
+    console.log(this === window);
+    this.nombre = "Contexto Global";
+    console.log(this.nombre);
+    function imprimir() {
+      console.log(this.nombre);
+    }
+    imprimir();
+
+    //una funcion normal crea su propio scope, por eso muestra contexto objeto
+    const obj = {
+      nombre: "Contexto Objeto",
+      imprimir: function () {
+        console.log(this.nombre);
+      }
+    }
+    obj.imprimir();
+    const obj2 = {
+      nombre: "Contexto Objeto 2",
+      imprimir
+    }
+    obj2.imprimir();
+
+    //la arrow function no maneja o crea su propio scope, obedece al scope donde a sido creado, el this agarra del padre donde se a creado, por eso muestra contexto global porque obj3 fue creado en el contexto global
+
+    const obj3 = {
+      nombre: "Contexto Objeto 3",
+      imprimir: () => {
+        console.log(this.nombre);
+      }
+    }
+    obj3.imprimir();
+
+    function Persona(nombre) {
+      const that = this;
+      //this.nombre = nombre;
+      that.nombre = nombre;
+
+      //return console.log(this.nombre);
+
+      //return function () {
+      //console.log(this.nombre);
+      //}
+
+      //return () => console.log(this.nombre);
+
+      return function () {
+        console.log(that.nombre);
+      }
+    }
+    let jon = new Persona("Jon");
+    jon();
+
+
+  </script>
+</body>
+
+</html>
